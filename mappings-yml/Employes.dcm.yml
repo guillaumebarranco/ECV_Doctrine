@@ -1,0 +1,27 @@
+Employes:
+    type: entity
+    table: employes
+    id:
+        idEmploye:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_employe
+            generator:
+                strategy: IDENTITY
+    fields:
+        idPersonne:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_personne
+        idFonction:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_fonction
+    lifecycleCallbacks: {  }

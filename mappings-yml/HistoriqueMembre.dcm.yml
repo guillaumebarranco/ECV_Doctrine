@@ -1,0 +1,30 @@
+HistoriqueMembre:
+    type: entity
+    table: historique_membre
+    id:
+        idHistorique:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_historique
+            generator:
+                strategy: IDENTITY
+    fields:
+        idMembre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_membre
+        idSeance:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_seance
+        date:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,24 @@
+Abonnements:
+    type: entity
+    table: abonnements
+    id:
+        idAbonnement:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_abonnement
+            generator:
+                strategy: IDENTITY
+    fields:
+        idForfait:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_forfait
+        debut:
+            type: datetime
+            nullable: false
+    lifecycleCallbacks: {  }

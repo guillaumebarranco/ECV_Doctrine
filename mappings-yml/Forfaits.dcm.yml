@@ -1,0 +1,38 @@
+Forfaits:
+    type: entity
+    table: forfaits
+    id:
+        idForfait:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_forfait
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        resum:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        prix:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        dureeJours:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: duree_jours
+    lifecycleCallbacks: {  }

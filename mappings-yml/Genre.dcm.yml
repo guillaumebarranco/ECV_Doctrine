@@ -1,0 +1,21 @@
+Genre:
+    type: entity
+    table: genres
+    id:
+        idGenre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_genre
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

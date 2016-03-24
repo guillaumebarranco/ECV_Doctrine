@@ -1,0 +1,52 @@
+Seances:
+    type: entity
+    table: seances
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        idFilm:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_film
+        idSalle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_salle
+        idPersonneOuvreur:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_personne_ouvreur
+        idPersonneTechnicien:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_personne_technicien
+        idPersonneMenage:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_personne_menage
+        debutSeance:
+            type: datetime
+            nullable: false
+            column: debut_seance
+        finSeance:
+            type: datetime
+            nullable: false
+            column: fin_seance
+    lifecycleCallbacks: {  }

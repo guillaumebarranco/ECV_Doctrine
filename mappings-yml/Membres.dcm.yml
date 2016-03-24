@@ -1,0 +1,35 @@
+Membres:
+    type: entity
+    table: membres
+    id:
+        idMembre:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_membre
+            generator:
+                strategy: IDENTITY
+    fields:
+        idPersonne:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_personne
+        idAbonnement:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: id_abonnement
+        dateInscription:
+            type: datetime
+            nullable: false
+            column: date_inscription
+        debutAbonnement:
+            type: datetime
+            nullable: false
+            column: debut_abonnement
+    lifecycleCallbacks: {  }

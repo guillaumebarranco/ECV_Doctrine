@@ -1,0 +1,35 @@
+Reductions:
+    type: entity
+    table: reductions
+    id:
+        idReduction:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_reduction
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        dateDebut:
+            type: datetime
+            nullable: false
+            column: date_debut
+        dateFin:
+            type: datetime
+            nullable: false
+            column: date_fin
+        pourcentageReduction:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: pourcentage_reduction
+    lifecycleCallbacks: {  }

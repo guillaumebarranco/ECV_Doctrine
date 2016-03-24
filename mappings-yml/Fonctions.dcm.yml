@@ -1,0 +1,30 @@
+Fonctions:
+    type: entity
+    table: fonctions
+    id:
+        idFonction:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_fonction
+            generator:
+                strategy: IDENTITY
+    fields:
+        nom:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        salaire:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        cadre:
+            type: boolean
+            nullable: false
+    lifecycleCallbacks: {  }

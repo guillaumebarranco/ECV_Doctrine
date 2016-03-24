@@ -1,0 +1,39 @@
+Salles:
+    type: entity
+    table: salles
+    id:
+        idSalle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_salle
+            generator:
+                strategy: IDENTITY
+    fields:
+        numeroSalle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: numero_salle
+        nomSalle:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: nom_salle
+        etageSalle:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: etage_salle
+        places:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+    lifecycleCallbacks: {  }

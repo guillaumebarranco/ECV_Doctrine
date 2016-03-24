@@ -1,0 +1,25 @@
+Voiture:
+    type: entity
+    table: voitures
+    id:
+        idVoiture:
+            type: integer
+            nullable: false
+            id: true
+            column: id_voiture
+            generator:
+                strategy: IDENTITY
+    fields:
+        nomVoiture:
+            type: string
+            nullable: false
+            length: 255
+        dateMiseEnCirculation:
+            type: datetime
+            nullable: false
+            column: date_mise_en_circulation
+        kilometrage:
+            type: integer
+            nullable: false
+            column: kilometrage
+

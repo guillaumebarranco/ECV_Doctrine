@@ -1,0 +1,79 @@
+Film:
+    type: entity
+    table: films
+    manyToOne:
+        distributeur:
+            targetEntity: distributeur
+            inversedBy: film
+            joinColumns:
+                id_distributeur:
+                    referencedColumnName: id_distributeur
+        genre:
+            targetEntity: genre
+            inversedBy: film
+            joinColumns:
+                id_genre:
+                    referencedColumnName: id_genre
+    indexes:
+        id_film:
+            columns:
+                - id_film
+        id_genre:
+            columns:
+                - id_genre
+    id:
+        idFilm:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_film
+            generator:
+                strategy: IDENTITY
+    fields:
+        idGenre:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: id_genre
+        idDistributeur:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: id_distributeur
+        titre:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        resum:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        dateDebutAffiche:
+            type: date
+            nullable: true
+            column: date_debut_affiche
+        dateFinAffiche:
+            type: date
+            nullable: true
+            column: date_fin_affiche
+        dureeMinutes:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: duree_minutes
+        anneeProduction:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: annee_production
+    lifecycleCallbacks: {  }
