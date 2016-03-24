@@ -1,6 +1,10 @@
 Genre:
     type: entity
     table: genres
+    oneToMany:
+        film:
+            targetEntity: film
+            mappedBy: genre
     id:
         idGenre:
             type: integer

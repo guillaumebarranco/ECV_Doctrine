@@ -52,6 +52,16 @@ class Film
      */
     private $anneeProduction;
 
+    /**
+     * @var \distributeur
+     */
+    private $distributeur;
+
+    /**
+     * @var \genre
+     */
+    private $genre;
+
 
     /**
      * Get idFilm
@@ -253,6 +263,54 @@ class Film
     public function getAnneeProduction()
     {
         return $this->anneeProduction;
+    }
+
+    /**
+     * Set distributeur
+     *
+     * @param \distributeur $distributeur
+     *
+     * @return Film
+     */
+    public function setDistributeur(\distributeur $distributeur = null)
+    {
+        $this->distributeur = $distributeur;
+
+        return $this;
+    }
+
+    /**
+     * Get distributeur
+     *
+     * @return \distributeur
+     */
+    public function getDistributeur()
+    {
+        return $this->distributeur;
+    }
+
+    /**
+     * Set genre
+     *
+     * @param \genre $genre
+     *
+     * @return Film
+     */
+    public function setGenre(\genre $genre = null)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return \genre
+     */
+    public function getGenre()
+    {
+        return $this->genre;
     }
 }
 

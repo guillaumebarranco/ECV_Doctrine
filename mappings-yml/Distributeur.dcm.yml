@@ -1,6 +1,10 @@
 Distributeur:
     type: entity
     table: distributeurs
+    oneToMany:
+        film:
+            targetEntity: film
+            mappedBy: distributeur
     id:
         idDistributeur:
             type: integer

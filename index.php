@@ -53,15 +53,22 @@ require_once ('bootstrap.php');
 
 $em = $entityManager;
 
-$all_films = $em->getRepository('Film')->createQueryBuilder('f')
-	->where('f.titre LIKE :title')
-	->andWhere('f.dureeMinutes > :duration')
-	->setParameter('title', '%'.$search.'%')
-	->setParameter('duration', 120)
-	->orderBy('f.dateDebutAffiche', 'ASC')
-	->getQuery()
-	->getResult()
-;
+// $all_films = $em->getRepository('Film')->createQueryBuilder('f')
+// 	->where('f.titre LIKE :title')
+// 	->andWhere('f.dureeMinutes > :duration')
+// 	->setParameter('title', '%'.$search.'%')
+// 	->setParameter('duration', 120)
+// 	->orderBy('f.dateDebutAffiche', 'ASC')
+// 	->getQuery()
+// 	->getResult()
+// ;
+
+$all_films = $em->getRepository('Film')->getLongFilmsMatchName($search);
+
+// $all_films = $em->createQuery("select f from Film f where f.anneeProduction >= '2007'")->getResult();
+// var_dump($all_films);
+// die;
+
 
 if(count($all_films) !== 0) {
 

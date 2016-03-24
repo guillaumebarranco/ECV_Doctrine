@@ -42,6 +42,18 @@ class Distributeur
      */
     private $pays;
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $film;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->film = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get idDistributeur
@@ -195,6 +207,40 @@ class Distributeur
     public function getPays()
     {
         return $this->pays;
+    }
+
+    /**
+     * Add film
+     *
+     * @param \film $film
+     *
+     * @return Distributeur
+     */
+    public function addFilm(\film $film)
+    {
+        $this->film[] = $film;
+
+        return $this;
+    }
+
+    /**
+     * Remove film
+     *
+     * @param \film $film
+     */
+    public function removeFilm(\film $film)
+    {
+        $this->film->removeElement($film);
+    }
+
+    /**
+     * Get film
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFilm()
+    {
+        return $this->film;
     }
 }
 

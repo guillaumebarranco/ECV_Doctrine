@@ -1,5 +1,6 @@
 Film:
     type: entity
+    repositoryClass: FilmRepository
     table: films
     manyToOne:
         distributeur:
