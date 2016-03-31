@@ -45,14 +45,14 @@ class Distributeur
     /**
      * @var \Doctrine\Common\Collections\Collection
      */
-    private $film;
+    private $films;
 
     /**
      * Constructor
      */
     public function __construct()
     {
-        $this->film = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->films = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
@@ -218,7 +218,7 @@ class Distributeur
      */
     public function addFilm(\film $film)
     {
-        $this->film[] = $film;
+        $this->films[] = $film;
 
         return $this;
     }
@@ -230,17 +230,17 @@ class Distributeur
      */
     public function removeFilm(\film $film)
     {
-        $this->film->removeElement($film);
+        $this->films->removeElement($film);
     }
 
     /**
-     * Get film
+     * Get films
      *
      * @return \Doctrine\Common\Collections\Collection
      */
-    public function getFilm()
+    public function getFilms()
     {
-        return $this->film;
+        return $this->films;
     }
 }
 

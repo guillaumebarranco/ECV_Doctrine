@@ -1,7 +1,28 @@
 # ECV_Doctrine
 
-##Create dabatase from Model
-	php vendor/doctrine/orm/bin/doctrine.php orm:schema-tool:create
+##Composer init
+
+##Require doctrine with composer (in composer.json)
+	{
+	  "require": {
+	    "doctrine/orm": "*",
+	    "symfony/yaml": "^3.0"
+	  },
+	    "autoload": {
+	    "psr-0": {
+	      "": "Models/"
+	    }
+	  }
+	}
+
+##import Doctrine methods
+	use Doctrine\ORM\Tools\Setup;
+	use Doctrine\ORM\EntityManager;
+
+##Set mappings folder in function Setup::createYAMLMetadataConfiguration()
+
+##Create entityManager
+	$em = EntityManager::create($dbParams, $config);
 
 ##Create YML from database
 	php vendor/doctrine/orm/bin/doctrine.php orm:convert-mapping --from-database yml mappings-yml
@@ -14,3 +35,8 @@
 
 ##Generate Repositories
 	php vendor/doctrine/orm/bin/doctrine.php orm:generate:repositories Models
+
+##ELSE
+
+##Create dabatase from Model
+	php vendor/doctrine/orm/bin/doctrine.php orm:schema-tool:create

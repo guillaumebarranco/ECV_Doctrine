@@ -2,7 +2,7 @@ Distributeur:
     type: entity
     table: distributeurs
     oneToMany:
-        film:
+        films:
             targetEntity: film
             mappedBy: distributeur
     id:
